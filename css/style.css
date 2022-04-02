@@ -41,10 +41,15 @@ section {
 .top-bar {
     background-color: var(--cta-green);
     color: var(--offwhite);
-    display: flex;
-    place-content: space-between;
     padding: 0 1em;
     font-size: 1.5rem;
+    position: fixed;
+    width: 100vw;
+}
+
+.top-bar>div {
+    display: flex;
+    place-content: space-between;
 }
 
 .left-side {
@@ -75,7 +80,7 @@ nav>ul>li{
     align-self: left;
 }
 
-.top-bar>a{
+.top-bar>div>a{
     color: var(--secondary-background);
     margin: 1em;
 }
@@ -90,22 +95,33 @@ nav>ul>li{
     background-color: var(--secondary-background);
     align-items: center;
     font-size: 2rem;
+    padding-top: 3em;
 }
 
 .top-hero {
     display: flex;
+    place-content: space-evenly;
 }
 
 .major-title {
     font-size: 7rem;
     font-weight: normal;
+    line-height: 1.2em;
     margin: 0;
 }
 
 .my-photo {
+    /*height: 200px;
+    width: 300px;
+    */object-fit: cover;
+    overflow: hidden;
+    object-position: 10% 20%;
+    border-radius: 1em;
+    max-height: 300px;
+}
 
-    width: 50%;
-    height: 50%;
+.hero>div>p {
+    line-height: 1em;
 }
 
 /*Skills menu*/
@@ -115,12 +131,12 @@ nav>ul>li{
     font-size: 1.5rem;
 }
 
-.skills>h2 {
+.skills>div>h2 {
     text-align: center;
     font-size: 3rem;
 }
 
-.skills>div {
+.skills>div>div {
     display: flex;
     place-content: center;
 }
@@ -133,7 +149,7 @@ nav>ul>li{
     margin: 0 2em;
 }
 
-.pie-chart1 {
+.pie-chart2 {
     margin-top: 0;
     display: block;
     /*position: absolute;*/
@@ -153,7 +169,7 @@ nav>ul>li{
     align-items: center;
 }
 
-.pie-chart2 {
+.pie-chart1 {
     margin-top: 0;
     display: block;
     /*position: absolute;*/
@@ -201,46 +217,125 @@ nav>ul>li{
     color: var(--nodec);
 }
 
-/*Contact menu*/
-.contact {
-    list-style-type:none;
-    background-color: var(--third-color);
-    color: white;
-    display:block;
+/*Projects*/
+.projects {
+    background-color: var(--offwhite);
 }
 
-.contact>h2 {
+.projects>div{
+    display: flex;
+}
+
+.projects>div>a {
+    display: inline-block;
+    align-self: center;
+    padding: 1em;
+    width: 10%;
+}
+
+.arrow {
+    width: 70%;
+    stroke: var(--cta-green);
+    overflow: visible;
+}
+
+.arrow>g {
+    width: max-content;
+}
+
+.arrow>g>path {
+    fill: var(--cta-green);
+}
+
+
+
+.card {
+    background-color: var(--offblack);
+    color: var(--offwhite);
+    border-radius: 5em;
+    width: 80%;
+    padding: 1em 1em 2em 1em;
     text-align: center;
-    font-size: 2em;
-}
-
-.contact-info {
-    display: table;
-    min-width: 100%;
-    font-size: 1.5em;
-}
-
-.contact-info>div {
-    display: table-cell;
-    min-width: 40%;
     align-items: center;
 }
 
-.contact-forum>input {
-    width: 60%;
-    height: 1.2em;
-    font-size: 1em;
+.card>h3 {
+    font-size: 3rem;
+    margin: 0;
 }
 
-.contact-forum>textarea {
-    font-size: 1.2em;
-    margin-bottom: .8em;
+.card>img {
+    margin: 1em auto;
+    width: 80%;
 }
 
-.contact-forum>a {
-    background-color: var(--primary-background);
-    color: var(--secondary-background);
-    margin: 50% 0;
-    padding: .6em 1.5em;
+.card>p {
+    font-size: 2rem;
+}
+
+.card>a {
+    background-color: var(--cta-green-dim);
+    padding: 1em 2.5em;
     border-radius: 5em;
+    font-weight: bold;
+    color: var(--offwhite);
+    margin-bottom: 3em;
+    font-size: 1.5rem;
+}
+
+/*Contact*/
+.contact {
+    background-color: var(--offblack);
+    color: var(--offwhite);
+}
+
+.contact>div>h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact-info>div {
+    display: block;
+    font-size: 1.5rem;
+}
+
+.contact-forum {
+    margin-bottom: .5em;
+}
+
+.contact-forum>textarea{
+    resize: none;
+}
+
+.submit-button{
+    background-color: var(--cta-green-dim);
+    padding: 1em 2.5em;
+    border-radius: 5em;
+    font-weight: bold;
+    color: var(--offwhite);
+    font-size: 1.2rem;
+}
+
+.right-column>p>a {
+    color: var(--cta-green);
+}
+
+/*Footer*/
+footer {
+    background-color: var(--offblack);
+    color: var(--offwhite);
+    text-align: center;
+    padding: 3em 0 1em 0;
+}
+
+@media only screen and (min-width: 1200px)  {
+    .content-constrictor {
+        width: 1200px;
+        margin: 0 auto;
+    }
 }

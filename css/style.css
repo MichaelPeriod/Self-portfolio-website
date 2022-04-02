@@ -44,7 +44,7 @@ section {
     padding: 0 1em;
     font-size: 1.5rem;
     position: fixed;
-    width: 100vw;
+    width: 97vw;
 }
 
 .top-bar>div {
@@ -80,15 +80,19 @@ nav>ul>li{
     align-self: left;
 }
 
-.top-bar>div>a{
-    color: var(--secondary-background);
-    margin: 1em;
-}
-
 .current-tab {
     background-color: var(--cta-green-dim);
     font-weight: bold;
 }
+
+.top-bar>div>.right-side {
+    margin: 1em;
+}
+
+.top-bar>div>div>a{
+    color: var(--secondary-background);
+}
+
 
 /*Hero menu*/
 .hero {
@@ -271,6 +275,8 @@ nav>ul>li{
 
 .card>p {
     font-size: 2rem;
+    line-height: 2rem;
+    padding-bottom: .5em;
 }
 
 .card>a {
@@ -290,7 +296,7 @@ nav>ul>li{
 }
 
 .contact>div>h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     text-align: center;
 }
 
@@ -337,5 +343,46 @@ footer {
     .content-constrictor {
         width: 1200px;
         margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 940px) {
+    nav {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    .my-photo {
+        display: none;
+    }
+
+    .pie-chart {
+        display: none;
+    }
+
+    .top-skills>div {
+        margin-right: 1em;
+    }
+
+    .bottom-skills>div {
+        margin-left: 1em;
+    }
+
+    .contact-info {
+        display: inline;
+    }
+
+    .major-title {
+        font-size: 4.5rem;
+    }
+
+    .hero>div>p {
+        font-size: 1.5rem;
+    }
+
+    .card>p {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
     }
 }

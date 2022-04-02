@@ -80,6 +80,10 @@ nav>ul>li{
     align-self: left;
 }
 
+nav>ul>li>a {
+    color: var(--offwhite);
+}
+
 .current-tab {
     background-color: var(--cta-green-dim);
     font-weight: bold;

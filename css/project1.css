@@ -1,0 +1,122 @@
+/*https://www.figma.com/file/Or7LEsC7aQ3g7a3Au14N90/Michael'sShowcaseTemplate?node-id=21%3A2*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+    --cta-green: #6AB27D;
+    --cta-green-dim: #50976C;
+    --offwhite: #f3f3f3;
+    --offblack: #242424;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--offwhite);
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.content-constrictor {
+    padding: 0 1em;
+}
+
+/*Navigation Menu*/
+.top-bar {
+    background-color: var(--cta-green);
+    color: var(--offwhite);
+    padding: 0 1em;
+    font-size: 1.5rem;
+    position: fixed;
+    width: 97vw;
+}
+
+.top-bar>div {
+    display: flex;
+    place-content: space-between;
+}
+
+.left-side {
+    display: flex;
+}
+
+.title-logo {
+    padding: 0 1em 0 0;
+    margin: 0;
+    align-content: center;
+}
+
+nav {
+    margin: 0;
+    place-content: left;
+}
+
+nav>ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items:stretch;
+}
+
+nav>ul>li{
+    padding: 1em;
+    display: inline;
+    align-self: left;
+}
+
+nav>ul>li>a {
+    color: var(--offwhite);
+}
+
+.current-tab {
+    background-color: var(--cta-green-dim);
+    font-weight: bold;
+}
+
+.top-bar>div>.right-side {
+    margin: 1em;
+}
+
+.top-bar>div>div>a{
+    color: var(--secondary-background);
+}
+
+/*Game-display*/
+.game-display {
+    padding-top: 8em;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 85%; /*Return for constrictor later*/
+}
+
+/*Game instructions*/
+p.instruction-title {
+    font-size: 1.7rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+.bottom-selection {
+    display: flex;
+    align-content: space-between;
+}

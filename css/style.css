@@ -1,0 +1,246 @@
+/*https://www.figma.com/file/Or7LEsC7aQ3g7a3Au14N90/Michael'sShowcaseTemplate?node-id=0%3A1*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+    --cta-green: #6AB27D;
+    --cta-green-dim: #50976C;
+    --offwhite: #f3f3f3;
+    --offblack: #242424;
+
+    --cppc: aquamarine;
+    --csc: coral;
+    --htmlc: forestgreen;
+    --jsc: darkorchid;
+    --cssc: firebrick;
+    --pc: springgreen;
+    --vbc: wheat;
+    --unityc: khaki;
+    --p5jsc: violet;
+    --nodec: darkviolet;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--offwhite);
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+section {
+    padding: 1em 1em
+}
+
+/*Navigation Menu*/
+.top-bar {
+    background-color: var(--cta-green);
+    color: var(--offwhite);
+    display: flex;
+    place-content: space-between;
+    padding: 0 1em;
+    font-size: 1.5rem;
+}
+
+.left-side {
+    display: flex;
+}
+
+.title-logo {
+    padding: 0 1em 0 0;
+    margin: 0;
+    align-content: center;
+}
+
+nav {
+    margin: 0;
+    place-content: left;
+}
+
+nav>ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items:stretch;
+}
+
+nav>ul>li{
+    padding: 1em;
+    display: inline;
+    align-self: left;
+}
+
+.top-bar>a{
+    color: var(--secondary-background);
+    margin: 1em;
+}
+
+.current-tab {
+    background-color: var(--cta-green-dim);
+    font-weight: bold;
+}
+
+/*Hero menu*/
+.hero {
+    background-color: var(--secondary-background);
+    align-items: center;
+    font-size: 2rem;
+}
+
+.top-hero {
+    display: flex;
+}
+
+.major-title {
+    font-size: 7rem;
+    font-weight: normal;
+    margin: 0;
+}
+
+.my-photo {
+
+    width: 50%;
+    height: 50%;
+}
+
+/*Skills menu*/
+.skills {
+    background-color: var(--offblack);
+    color: var(--offwhite);
+    font-size: 1.5rem;
+}
+
+.skills>h2 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.skills>div {
+    display: flex;
+    place-content: center;
+}
+
+.left-column {
+    display: block;
+}
+
+.skills>div>div {
+    margin: 0 2em;
+}
+
+.pie-chart1 {
+    margin-top: 0;
+    display: block;
+    /*position: absolute;*/
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-image: conic-gradient(
+        var(--cppc) 0deg 140deg,
+        var(--csc) 140deg 230deg,
+        var(--htmlc) 230deg 280deg,
+        var(--jsc) 280deg 300deg,
+        var(--cssc) 300deg 330deg,
+        var(--pc) 330deg 350deg,
+        var(--vbc) 350deg 360deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-chart2 {
+    margin-top: 0;
+    display: block;
+    /*position: absolute;*/
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-image: conic-gradient(
+        var(--unityc) 0deg 280deg,
+        var(--nodec) 280deg 330deg,
+        var(--p5jsc) 330deg 360deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Pie graph colors*/
+.cpp {
+    color: var(--cppc);
+}
+.cs {
+    color: var(--csc);
+}
+.html {
+    color: var(--htmlc);
+}
+.js {
+    color: var(--jsc);
+}
+.css {
+    color: var(--cssc);
+}
+.python {
+    color: var(--pc);
+}
+.vb {
+    color: var(--vbc);
+}
+.unity {
+    color: var(--unityc);
+}
+.p5js {
+    color: var(--p5jsc);
+}
+.nodejs {
+    color: var(--nodec);
+}
+
+/*Contact menu*/
+.contact {
+    list-style-type:none;
+    background-color: var(--third-color);
+    color: white;
+    display:block;
+}
+
+.contact>h2 {
+    text-align: center;
+    font-size: 2em;
+}
+
+.contact-info {
+    display: table;
+    min-width: 100%;
+    font-size: 1.5em;
+}
+
+.contact-info>div {
+    display: table-cell;
+    min-width: 40%;
+    align-items: center;
+}
+
+.contact-forum>input {
+    width: 60%;
+    height: 1.2em;
+    font-size: 1em;
+}
+
+.contact-forum>textarea {
+    font-size: 1.2em;
+    margin-bottom: .8em;
+}
+
+.contact-forum>a {
+    background-color: var(--primary-background);
+    color: var(--secondary-background);
+    margin: 50% 0;
+    padding: .6em 1.5em;
+    border-radius: 5em;
+}

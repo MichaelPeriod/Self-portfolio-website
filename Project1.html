@@ -31,18 +31,22 @@
 
 	<section class="game-display">
 		<div class="content-constrictor">
-			<h1>Game Title</h1>
-			<img id="game-cover-photo" src="Images/HowToPlayImage1.PNG" width="800px" height="450px">
-				<div id="unity-container" class="unity-desktop">
-					<canvas id="unity-canvas" width=800 height=450></canvas>
-						<div id="unity-loading-bar">
-							<div id="unity-logo"></div>
-							<div id="unity-progress-bar-empty">
-							<div id="unity-progress-bar-full"></div>
-							</div>
-						</div>
-					<div id="unity-warning"> </div>
-					<div id="unity-footer">
+			<h1>Volleyball Galatica</h1>
+			<div id="game-cover-photo">
+				<img src="Images/HowToPlayImage1.PNG" width="800px" height="450px">
+				<p class="small-text">Your divice doesn't have enough width or is not supported for this game preview</p>
+			</div>
+			<div id="unity-container" class="unity-desktop">
+				<canvas id="unity-canvas" width=800 height=450></canvas>
+				<div id="unity-loading-bar">
+					<div id="unity-logo"></div>
+					<div id="unity-progress-bar-empty">
+						<div id="unity-progress-bar-full"></div>
+					</div>
+				</div>
+				
+				<div id="unity-warning"> </div>
+				<div id="unity-footer">
 					<div id="unity-webgl-logo"></div>
 					<div id="unity-fullscreen-button"></div>
 				</div>
@@ -54,16 +58,21 @@
 		<div class="content-constrictor">
 			<div class="top-section">
 				<p class="instruction-title">Description -</p>
-				<p class="explination">Explination of all the things this game does.</p>
+				<p class="explination">The core premise is simple; similar to volleyball you must get the ball to the ground on your opponent's side whilst keeping it off your ground. Can you stand up to the challenge? And will you be taking it alone? Press start, add as many players as you would like (max 4), click their name to set it to AI if necessary, and find out.</p>
 			</div>
 			<div class="bottom-section">
 				<div class="left-column">
 					<p class="instruction-title">Controls -</p>
-					<p class="explination">Explination of the controls</p>
+					<p class="explination">Player 1:<br>A and D to move left and right <br>W to jump <br>E to use your ultimate ability <br><br>Player 2 (Optional):<br>LEFT and RIGHT ARROWS to move left and right <br>UP ARROW to jump <br>RIGHT SHIFT to use your ultimate ability</p>
 				</div>
 				<div class="right-column">
 					<p class="instruction-title">Objective -</p>
-					<p class="explination">Explination of the goals</p>
+					<p class="explination">As a player, you have 2 primary objectives:
+						<ul class="objectives">
+							<li>First and formost the goal is to keep the ball away from the ground on your side. If it does, you will concede a point and being as you only have 5 as indicated on the top each one is critical.</li>
+							<li>A secondary objective is one that contributes to the primary -- you can push in the buttons on the bottom in order to gain your ultimate! Using this, depending on the selection you set in the lobby you will have 2 options to choose from depicted in the 3rd page of the "How to play" secton</li>
+						</ul>
+					</p>
 				</div>
 			</div>
 		</div>
@@ -81,27 +90,26 @@
 			
 			<div class="view-reviews">
 				<h3>Other Reviews:</h3>
+				
 				<div class="review">
-					<p class="name">Name -</p>
+					<p class="name">Liam Palmer -</p>
 					<p class="review-text">Game was cool if not bad, would loose again!</p>
 				</div>
 				<div class="review">
-					<p class="name">Name2 -</p>
+					<p class="name">Hunter -</p>
 					<p class="review-text">Sussy</p>
 				</div>
 			</div>
 		</div>
-	</div>
+	</section>
+	
+	<footer>
+		<div class="content-constrictor">
+			<p>Website was made by Michael Utz</p>
+		</div>
+	</footer>
 
-</section>
-
-<footer>
-	<div class="content-constrictor">
-		<p>Website was made by Michael Utz</p>
-	</div>
-</footer>
-
-<script>
+	<script>
 	var container = document.querySelector("#unity-container");
 	var canvas = document.querySelector("#unity-canvas");
 	var loadingBar = document.querySelector("#unity-loading-bar");
@@ -184,9 +192,9 @@
 	script.src = loaderUrl;
 	script.onload = () => {
 	  createUnityInstance(canvas, config, (progress) => {
-		progressBarFull.style.width = 100 * progress + "%";
+		//progressBarFull.style.width = 100 * progress + "%";
 	  }).then((unityInstance) => {
-		loadingBar.style.display = "none";
+		//loadingBar.style.display = "none";
 		fullscreenButton.onclick = () => {
 		  unityInstance.SetFullscreen(1);
 		};
@@ -196,12 +204,15 @@
 	};
 	document.body.appendChild(script);
 
-	window.addEventListener('resize', reportWindowSize);
-	function reportWindowSize(){
-		if(window.innerWidth > 800){ //Show game
-			canvas.display = false;
-			//RETURN
-			//MAKE CANVAS HIDE WHEN SHRUNK AND COVER PHOTO DISPLAY AND REVERSE
+	window.addEventListener('resize', updateWindowSize);
+	updateWindowSize(); //Check if screen can hold window on load
+	function updateWindowSize(){
+		if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent) || window.innerWidth < 800){
+			coverPhoto.classList.remove("hide-element");
+			canvas.classList.add("hide-element");
+		} else {
+			coverPhoto.classList.add("hide-element");
+			canvas.classList.remove("hide-element");
 		}
 	}
   </script>

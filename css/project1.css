@@ -109,7 +109,7 @@ img {
     margin-right: auto;
     height: auto;
     width: 85%;
-	display: none;
+	display: block;
 }
 
 canvas {
@@ -120,11 +120,21 @@ canvas {
     width: 85%;
 }
 
+.hide-element {
+	display: none;
+}
+
+.small-text {
+	font-size: 0.7rem;
+	text-align: center;
+}
+
 /*Game instructions*/
 
 
 .game-instructions>.content-constrictor{
-    width: 78%;
+    width: 85%;
+	margin: auto;
 }
 
 p.instruction-title {
@@ -136,7 +146,7 @@ p {
 }
 
 .explination {
-	line-height: 1.1rem;
+	line-height: 1.6rem;
 }
 
 .top-section {
@@ -145,12 +155,19 @@ p {
 
 .bottom-section {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-evenly;
 	margin-bottom: 1em;
 }
 
-.bottom-selection>div {
-    display: block;
+.bottom-section>div {
+    display: inline-block;
+	flex: 1;
+	padding: .5em;
+}
+
+.objectives {
+	margin-left: 1rem;
+	font-size: 1.3rem;
 }
 
 /*Reviews*/
@@ -164,7 +181,7 @@ textarea {
     color: var(--cta-green);
     background-color: var(--offwhite);
     overflow-y: scroll;
-    width: 100%;
+    width: 95%;
     border: none;
     margin: 1em;
 	font-size: 1.5rem;
@@ -202,6 +219,16 @@ footer {
     color: var(--offwhite);
     text-align: center;
     padding: 3em 0 1em 0;
+}
+
+footer>div>p {
+	font-size: 1rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    nav {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 1200px)  {

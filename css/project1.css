@@ -28,6 +28,10 @@ a {
     padding: 0 1em;
 }
 
+section {
+    padding: 0 1em;
+}
+
 /*Navigation Menu*/
 .top-bar {
     background-color: var(--cta-green);
@@ -104,10 +108,25 @@ img {
     margin-left: auto;
     margin-right: auto;
     height: auto;
-    width: 85%; /*Return for constrictor later*/
+    width: 85%;
+	display: none;
+}
+
+canvas {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 85%;
 }
 
 /*Game instructions*/
+
+
+.game-instructions>.content-constrictor{
+    width: 78%;
+}
+
 p.instruction-title {
     font-size: 1.7rem;
 }
@@ -116,7 +135,82 @@ p {
     font-size: 1.5rem;
 }
 
-.bottom-selection {
+.explination {
+	line-height: 1.1rem;
+}
+
+.top-section {
+    padding-bottom: 1em;
+}
+
+.bottom-section {
     display: flex;
-    align-content: space-between;
+    justify-content: space-between;
+	margin-bottom: 1em;
+}
+
+.bottom-selection>div {
+    display: block;
+}
+
+/*Reviews*/
+.reviews {
+    background-color: var(--offblack);
+    color: var(--offwhite);
+}
+
+textarea {
+    resize: none;
+    color: var(--cta-green);
+    background-color: var(--offwhite);
+    overflow-y: scroll;
+    width: 100%;
+    border: none;
+    margin: 1em;
+	font-size: 1.5rem;
+}
+
+.push-split {
+	display: flex;
+	justify-content: space-between;
+}
+
+.submit-button {
+	background-color: var(--cta-green-dim);
+	padding: .5em 1em;
+	font-size: 1.3rem;
+	border-radius: 5em;
+	display: block;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 2rem;
+}
+
+.review {
+	padding: 1em 0;
+}
+
+.review-text {
+	line-height: 1.1rem;
+}
+
+/*Footer*/
+footer {
+    background-color: var(--offblack);
+    color: var(--offwhite);
+    text-align: center;
+    padding: 3em 0 1em 0;
+}
+
+@media only screen and (min-width: 1200px)  {
+    .content-constrictor {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    img {
+        width: 100%;
+    }
 }
